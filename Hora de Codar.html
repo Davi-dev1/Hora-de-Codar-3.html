@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <script>
+        function algoritmoparalerdoisvalores(){
+       let valor1=parseInt(prompt("Digite o valor do primeiro número:"));
+       var valor2=parseInt(prompt(" Digite o valor do segundo número:"));
+
+       
+
+       if(valor2 == 0 ){
+        alert("Número inválido.Por favor digite um valor maior que 0.")
+        var valor2=parseInt(prompt("Digite um número válido para o  segundo número:"));
+        }   else 
+            {  if (valor2 < 0){
+            alert("Número inválido.Por favor digite um valor maior que 0.");
+          var valor2=parseInt(prompt("Digite um número válido para o segundo número:"));    
+        }
+    }
+  const divisão=valor1/valor2;
+    alert("O valor da divisão dos dois números é : "+ divisão);
+     }
+
+
+     algoritmoparalerdoisvalores();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
