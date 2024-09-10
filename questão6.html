@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+function calcularMedias() {
+    var notaAprovacao = 9.5;
+    var alunosAprovados = 0;
+
+    while (true) {
+        var nota1 = parseFloat(prompt("Informe a primeira nota:"));
+        var nota2 = parseFloat(prompt("Informe a segunda nota:"));
+
+        if (isNaN(nota1) || isNaN(nota2)) {
+            document.write("Notas inválidas. Por favor, insira números válidos.");
+            continue;
+        }
+
+
+        var media = (nota1 + nota2) / 2;
+        document.write("Média final: "  +  media );
+
+        
+        if (media >= notaAprovacao) {
+            alunosAprovados++;
+        }
+
+        
+        var resposta = prompt("Calcular a média de outro aluno? Sim/Não").toLowerCase();
+        if (resposta  !== "s") {
+            break; 
+        }
+    }
+
+  
+    document.write("<p>Número de alunos aprovados : "  +  alunosAprovados +"</p>");
+}
+
+calcularMedias();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

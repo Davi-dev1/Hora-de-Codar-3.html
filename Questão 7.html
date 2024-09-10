@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function lerNota(ordinal) {
+    var nota;
+    while (true) {
+        nota = parseFloat(prompt("Informe a " + ordinal + "ª nota (0 a 10):"));
+        if (nota >= 0 && nota <= 10) {
+            return nota;
+        } else {
+            document.write("Nota inválida. A nota deve estar entre 0 e 10. Tente novamente.");
+        }
+    }
+}
+
+
+function calcularMedia() {
+    var totalNotas = 6;
+    var somaNotas = 0;
+
+    for (var i = 1; i <= totalNotas; i++) {
+        var nota = lerNota(i);
+        somaNotas += nota;
+    }
+
+    
+    var media = somaNotas / totalNotas;
+    
+    
+    document.write("A média final do aluno é: " + media.toFixed(2));
+}
+calcularMedia();
+
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

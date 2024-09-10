@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function imprimirTabuadas() {
+    var N = parseInt(prompt("Informe o valor de N:"), 10);
+
+    
+    if (isNaN(N) || N <= 0) {
+        document.write("Por favor, informe um número válido maior que 0.");
+        return; 
+    }
+
+  
+    for (var i = 1; i <= N; i++) {
+        document.write("<p>Tabuada do " + i + ":" +"</p>");
+      
+        for (var j = 1; j <= 10; j++) {
+        document.write("<P> O valor de : "  +  i +"x" +j  + "=" +(i*j) +"</p>" );
+        }
+        document.write(""); 
+    }
+}
+
+imprimirTabuadas();
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

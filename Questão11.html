@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function contarValores() {
+        var valoresDentro = 0;
+        var valoresFora = 0;
+        var intervaloInferior = 24;
+        var intervaloSuperior = 42;
+    
+
+        for (var i = 0; i < 10; i++) {
+            var valor = parseFloat(prompt("Informe o valor #" + (i + 1) + ":"));
+    
+    
+            if (!isNaN(valor)) {
+              
+                if (valor >= intervaloInferior && valor <= intervaloSuperior) {
+                    valoresDentro++;
+                } else {
+                    valoresFora++;
+                }
+            } else {
+                document.write("Valor inválido informado. Informe um número válido.");
+                i--; 
+            }
+        }
+    
+        
+    document.write("Número de valores dentro do intervalo [24, 42]: " + valoresDentro);
+        document.write("Número de valores fora do intervalo [24, 42]: " + valoresFora);
+    }
+    
+    contarValores();
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
